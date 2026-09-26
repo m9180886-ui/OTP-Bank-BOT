@@ -60,7 +60,7 @@ export default {
             })
                 .addFields(
                     {
-                        name: "💵 Cash",
+                        name: "💵 Pénz",
                         value: `$${wallet.toLocaleString()}`,
                         inline: true,
                     },
@@ -70,7 +70,7 @@ export default {
                         inline: true,
                     },
                     {
-                        name: "💰 Total",
+                        name: "💰 Öszes",
                         value: `$${(wallet + bank).toLocaleString()}`,
                         inline: true,
                     }
