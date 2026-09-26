@@ -55,28 +55,28 @@ export default {
         const bank = typeof userData.bank === 'number' ? userData.bank : 0;
 
             const embed = createEmbed({
-                title: `${targetUser.username}'s Balance`,
+                title: `fr{targetUser.username}'s Balance`,
                 description: `Here is the current financial status for ${targetUser.username}.`,
             })
                 .addFields(
                     {
                         name: "💵 Pénz",
-                        value: `$${wallet.toLocaleString()}`,
+                        value: `ft{wallet.toLocaleString()}`,
                         inline: true,
                     },
                     {
                         name: "🏦 Bank",
-                        value: `$${bank.toLocaleString()} / $${maxBank.toLocaleString()}`,
+                        value: `ft{bank.toLocaleString()} / $${maxBank.toLocaleString()}`,
                         inline: true,
                     },
                     {
                         name: "💰 Öszes",
-                        value: `$${(wallet + bank).toLocaleString()}`,
+                        value: `ft{(wallet + bank).toLocaleString()}`,
                         inline: true,
                     }
                 )
                 .setFooter({
-                    text: `Requested by ${interaction.user.tag}`,
+                    text: `Requested by ft{interaction.user.tag}`,
                     iconURL: interaction.user.displayAvatarURL(),
                 });
 
